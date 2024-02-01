@@ -1,1 +1,169 @@
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black; 
+    color: white; 
+}
+
+.header {
+    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/logo1.png');
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.body {
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.image-scroll-box {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.image-scroll-box img {
+    height: 200px;
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    color: black; 
+}
+
+.social-logos img {
+    height: 50px;
+    margin: 5px;
+}
+
+.menu-bar ul {
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.menu-bar li {
+    margin-bottom: 10px; 
+}
+
+.menu-bar a {
+    color: white; 
+    text-decoration: none; 
+    display: block; 
+}
+
+.menu-bar a:hover {
+    color: #ddd; 
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black; 
+    color: white; 
+}
+
+.header {
+    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/logo1.png');
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer; /* Makes it clear the header is clickable */
+}
+
+/* Dropdown menu styles */
+#dropdownMenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    display: none; /* Initially hidden */
+}
+
+#dropdownMenu li {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#dropdownMenu li a {
+    display: block;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+#dropdownMenu li a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Image gallery styles */
+.image-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.image-scroll-box img {
+    transition: transform 0.3s ease;
+    margin: 5px;
+}
+
+.image-scroll-box img:hover {
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+
+.social-logos img {
+    height: 50px;
+    margin: 5px;
+}
+
+#dropdownMenu {
+    z-index: 3; /* Higher than the hero image to ensure it's on top */
+    position: absolute; /* Adjust as necessary */
+}
+
+.hero {
+    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/Hero.png');
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px; 
+}
+
+.hero {
+    overflow: hidden;
+    position: relative;
+}
+
+.hero img {
+    position: absolute;
+    width: 110%; /* Start slightly zoomed out */
+    height: 110%;
+    top: -5%; /* Center the image in the div */
+    left: -5%;
+    transition: all 10s ease; /* Adjust timing as needed */
+}
+.header {
+    z-index: 2; /* Ensures the header is above other elements */
+    position: relative; /* Required for z-index to work */
+}
+
+.hero {
+    z-index: 1; /* Lower than the dropdown menu */
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+    <link rel="stylesheet" href="file:///C:/Users/clope/OneDrive%20-%20Los%20Angeles%20Community%20College%20District/Documents/CS%20112/HTML/CSS/styles.css">
+    <script>
+        function toggleDropdown() {
+            var x = document.getElementById("dropdownMenu");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+        // Ken Burns effect
+        document.addEventListener('DOMContentLoaded', function() {
+            var heroImage = document.querySelector('.hero img');
+            setTimeout(function() {
+                heroImage.style.width = '100%';
+                heroImage.style.height = '100%';
+                heroImage.style.top = '0';
+                heroImage.style.left = '0';
+            }, 100);
+        });
+    </script>
+</head>
+<body>
+    <div class="header" onclick="toggleDropdown()"></div>
+    <ul id="dropdownMenu" style="display: none;">
+        <li><a href="index1.html">Home</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+    <div class="hero">
+        <img src="C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/Hero.png" alt="Hero Image"> 
+    </div>
+    <div class="body">
+        <p>Welcome to my first page.</p>
+    </div>
+    <div class="footer">
+        <p>Contact Us</p>
+        <div class="social-logos">
+            <img src="C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/insta.png">
+            <img src="C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/tick.png">
+            <img src="C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/x.png">
+        </div>
+    </div>
+</body>
+</html>

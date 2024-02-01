@@ -8,7 +8,7 @@ body, html {
 }
 
 .header {
-    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/logo1.png');
+    background-image: url('images/logo1.png');
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -70,7 +70,7 @@ body, html {
 }
 
 .header {
-    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/logo1.png');
+    background-image: url('images/logo1.png');
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -139,7 +139,7 @@ body, html {
 }
 
 .hero {
-    background-image: url('C:/Users/clope/OneDrive - Los Angeles Community College District/Documents/CS 112/HTML/Images/Hero.png');
+    background-image: url('images/Hero.png');
     height: 400px;
     background-size: cover;
     background-position: center;

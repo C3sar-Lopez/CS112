@@ -1,80 +1,28 @@
-
+/* Reset and basic styling */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background-color: black; 
-    color: white; 
+    background-color: black;
+    color: white;
 }
 
-.header {
-    background-image: url('images/logo1.png');
-    height: 100px;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.body {
-    text-align: center;
-    margin-bottom: 20px; 
-}
-
-.image-scroll-box {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px 0;
-}
-
-.image-scroll-box img {
-    height: 200px;
-    margin-right: 10px;
-}
-
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
-    color: black; 
-}
-
-.social-logos img {
-    height: 50px;
-    margin: 5px;
-}
-
-.menu-bar ul {
-    list-style-type: none; 
-    margin: 0;
-    padding: 0;
-}
-
-.menu-bar li {
-    margin-bottom: 10px; 
-}
-
-.menu-bar a {
-    color: white; 
-    text-decoration: none; 
-    display: block; 
-}
-
-.menu-bar a:hover {
-    color: #ddd; 
-}
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: black; 
-    color: white; 
-}
-
+/* Header styles */
 .header {
     background-image: url('images/logo1.png');
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     cursor: pointer; /* Makes it clear the header is clickable */
+    z-index: 2; /* Ensures the header is above other elements */
+    position: relative; /* Required for z-index to work */
+    margin: 0;
+    padding: 0;
+}
+
+.header > *, .hero > * {
+    margin: 0;
+    padding: 0;
 }
 
 /* Dropdown menu styles */
@@ -86,6 +34,7 @@ body, html {
     position: absolute;
     width: 100%;
     display: none; /* Initially hidden */
+    z-index: 3; /* Higher than the hero image to ensure it's on top */
 }
 
 #dropdownMenu li {
@@ -105,50 +54,16 @@ body, html {
     color: black;
 }
 
-/* Image gallery styles */
-.image-row {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.image-scroll-box img {
-    transition: transform 0.3s ease;
-    margin: 5px;
-}
-
-.image-scroll-box img:hover {
-    transform: scale(1.1);
-}
-
-.footer {
-    background-color: #f1f1f1;
-    text-align: center;
-    padding: 20px;
-    color: black;
-}
-
-.social-logos img {
-    height: 50px;
-    margin: 5px;
-}
-
-#dropdownMenu {
-    z-index: 3; /* Higher than the hero image to ensure it's on top */
-    position: absolute; /* Adjust as necessary */
-}
-
+/* Hero image styles */
 .hero {
     background-image: url('images/Hero.png');
     height: 400px;
     background-size: cover;
     background-position: center;
-    margin-bottom: 20px; 
-}
-
-.hero {
+    margin-bottom: 20px;
     overflow: hidden;
     position: relative;
+    z-index: 1; /* Lower than the dropdown menu */
 }
 
 .hero img {
@@ -159,52 +74,74 @@ body, html {
     left: -5%;
     transition: all 10s ease; /* Adjust timing as needed */
 }
-.header {
-    z-index: 2; /* Ensures the header is above other elements */
-    position: relative; /* Required for z-index to work */
+
+/* Body styles */
+.body {
+    text-align: center;
+    margin-bottom: 20px; 
 }
 
-.hero {
-    z-index: 1; /* Lower than the dropdown menu */
+/* Image gallery styles */
+.image-scroll-box {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
 }
 
-.header, .hero {
-    margin: 0;
-    padding: 0;
+.image-scroll-box img {
+    height: 200px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
 }
 
-.header > *, .hero > * {
-    margin: 0;
-    padding: 0;
+.image-scroll-box img:hover {
+    transform: scale(1.1);
 }
+
+/* Footer styles */
+.footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    color: black; 
+}
+
+/* Social logos styles */
+.social-logos img {
+    height: 50px;
+    margin: 5px;
+}
+
+/* Contact form styles */
 #contactForm {
     display: none; /* Initially hidden */
-    background-color: white; /* Background color for the form */
-    color: black; /* Text color for the form */
-    padding: 20px; /* Padding around the form */
-    margin-top: 10px; /* Space between the footer text and the form */
-    border-radius: 5px; /* Rounded corners for the form */
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-top: 10px;
+    border-radius: 5px;
 }
 
 #contactForm input,
 #contactForm textarea {
-    width: calc(100% - 20px); /* Full width minus padding */
-    padding: 10px; /* Padding inside the inputs */
-    margin-bottom: 10px; /* Space between each field */
-    border: 1px solid #ccc; /* Border color */
-    border-radius: 3px; /* Rounded corners for inputs */
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
 }
 
 #contactForm button {
     width: 100%;
     padding: 10px;
-    background-color: #333; /* Button background color */
-    color: white; /* Button text color */
+    background-color: #333;
+    color: white;
     border: none;
-    border-radius: 3px; /* Rounded corners for the button */
-    cursor: pointer; /* Hand cursor on hover */
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 #contactForm button:hover {
-    background-color: #444; /* Darken button on hover */
+    background-color: #444;
 }
+

@@ -177,3 +177,34 @@ body, html {
     margin: 0;
     padding: 0;
 }
+#contactForm {
+    display: none; /* Initially hidden */
+    background-color: white; /* Background color for the form */
+    color: black; /* Text color for the form */
+    padding: 20px; /* Padding around the form */
+    margin-top: 10px; /* Space between the footer text and the form */
+    border-radius: 5px; /* Rounded corners for the form */
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: calc(100% - 20px); /* Full width minus padding */
+    padding: 10px; /* Padding inside the inputs */
+    margin-bottom: 10px; /* Space between each field */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 3px; /* Rounded corners for inputs */
+}
+
+#contactForm button {
+    width: 100%;
+    padding: 10px;
+    background-color: #333; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 3px; /* Rounded corners for the button */
+    cursor: pointer; /* Hand cursor on hover */
+}
+
+#contactForm button:hover {
+    background-color: #444; /* Darken button on hover */
+}

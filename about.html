@@ -4,21 +4,21 @@
 <head>
     <title>My First Web Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <script async defer 
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWeQKoAPzh6apIci-oLDHTvNpXeMKv81M&callback=initMap">
-    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWeQKoAPzh6apIci-oLDHTvNpXeMKv81M&callback=initMap"></script>
     <style>
         #map {
             height: 400px;
             width: 100%;
         }
+        #contactForm {
+            display: none; /* Initial state of the contact form is hidden */
+        }
     </style>
 </head>
 <body>
     <div class="header" onclick="toggleDropdown()">
-    <img src="images/logo1.png" alt="Logo" style="height:100px;"> <!-- Adjust the height as needed -->
-</div>
-    <div class="header" onclick="toggleDropdown()"></div>
+        <img src="images/logo1.png" alt="Logo" style="height:100px;">
+    </div>
     <ul id="dropdownMenu" style="display: none;">
         <li><a href="index.html">Home</a></li>
         <li><a href="Gallery.html">Gallery</a></li>
@@ -31,14 +31,14 @@
         </div>
         <div>
             <video width="640" height="360" controls>
-                <source src="images/Stellar nursery visualisation revealed by telescope data - BBC.mp4">
+                <source src="images/Stellar nursery visualisation revealed by telescope data - BBC.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
         <!-- Google Map Container -->
         <div id="map"></div>
     </div>
- <div class="footer">
+    <div class="footer">
         <p onclick="toggleContactForm()">Contact Us</p>
         <form id="contactForm">
             <input type="text" placeholder="Your Name" required>
@@ -48,14 +48,14 @@
         </form>
         <div class="social-logos">
             <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/insta.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/" target="_blank">
-            <img src="images/tick.png" alt="TikTok">
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-            <img src="images/x.png" alt="Twitter">
-        </a>
+                <img src="images/insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <img src="images/tick.png" alt="TikTok">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img src="images/x.png" alt="Twitter">
+            </a>
         </div>
     </div>
     <script>
@@ -68,8 +68,16 @@
             }
         }
 
+        function toggleContactForm() {
+            var form = document.getElementById("contactForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+
         function initMap() {
-            // Google Maps initialization code here
             var map = new google.maps.Map(document.getElementById('map'), {
                 center: {lat: 34.11806869506836, lng: -118.30036926269531},
                 zoom: 14
@@ -78,3 +86,4 @@
     </script>
 </body>
 </html>
+

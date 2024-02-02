@@ -144,4 +144,17 @@ body, html {
 #contactForm button:hover {
     background-color: #444;
 }
+.footer button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.footer button:hover {
+    background-color: #444;
+}
 

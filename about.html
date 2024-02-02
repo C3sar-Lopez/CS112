@@ -38,8 +38,14 @@
         <!-- Google Map Container -->
         <div id="map"></div>
     </div>
-    <div class="footer">
-        <p>Contact Us</p>
+ <div class="footer">
+        <p onclick="toggleContactForm()">Contact Us</p>
+        <form id="contactForm">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
         <div class="social-logos">
             <img src="images/insta.png">
             <img src="images/tick.png">

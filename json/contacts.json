@@ -1,0 +1,14 @@
+{
+    "contacts": [
+        {
+            "name": "John Doe",
+            "email": "johndoe@example.com",
+            "message": "Hello, I have a query about..."
+        },
+        {
+            "name": "Jane Smith",
+            "email": "janesmith@example.com",
+            "message": "I'm interested in your services..."
+        }
+    ]
+}

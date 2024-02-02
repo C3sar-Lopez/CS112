@@ -167,3 +167,13 @@ body, html {
 .hero {
     z-index: 1; /* Lower than the dropdown menu */
 }
+
+.header, .hero {
+    margin: 0;
+    padding: 0;
+}
+
+.header > *, .hero > * {
+    margin: 0;
+    padding: 0;
+}

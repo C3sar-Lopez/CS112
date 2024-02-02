@@ -3,9 +3,6 @@
 <head>
     <title>My First Web Page</title>
     <link rel="stylesheet" href="css/style.css">
-    <div class="header" onclick="toggleDropdown()">
-    <img src="images/logo1.png" alt="Logo" style="height:100px;"> <!-- Adjust the height as needed -->
-</div>
     <script>
         function toggleDropdown() {
             var x = document.getElementById("dropdownMenu");
@@ -13,6 +10,15 @@
                 x.style.display = "block";
             } else {
                 x.style.display = "none";
+            }
+        }
+
+        function toggleContactForm() {
+            var form = document.getElementById("contactForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
             }
         }
 
@@ -28,7 +34,9 @@
     </script>
 </head>
 <body>
-    <div class="header" onclick="toggleDropdown()"></div>
+    <div class="header" onclick="toggleDropdown()">
+        <img src="images/logo1.png" alt="Logo" style="height:100px;">
+    </div>
     <ul id="dropdownMenu" style="display: none;">
         <li><a href="index.html">Home</a></li>
         <li><a href="Gallery.html">Gallery</a></li>
@@ -42,23 +50,23 @@
     </div>
     <div class="footer">
         <p onclick="toggleContactForm()">Contact Us</p>
-        <form id="contactForm">
+<form id="contactForm">
             <input type="text" placeholder="Your Name" required>
             <input type="email" placeholder="Your Email" required>
             <textarea placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
         <div class="social-logos">
-   <a href="https://www.instagram.com/" target="_blank">
-            <img src="images/insta.png" alt="Instagram">
-        </a>
-        <a href="https://www.tiktok.com/" target="_blank">
-            <img src="images/tick.png" alt="TikTok">
-        </a>
-        <a href="https://twitter.com/" target="_blank">
-            <img src="images/x.png" alt="Twitter">
-        </a>
-</div>
+            <a href="https://www.instagram.com/" target="_blank">
+                <img src="images/insta.png" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank">
+                <img src="images/tick.png" alt="TikTok">
+            </a>
+            <a href="https://twitter.com/" target="_blank">
+                <img src="images/x.png" alt="Twitter">
+            </a>
+        </div>
     </div>
 </body>
 </html>

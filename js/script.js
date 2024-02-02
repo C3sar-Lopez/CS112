@@ -1,4 +1,3 @@
-
 function toggleDropdown() {
     var x = document.getElementById("dropdownMenu");
     if (x.style.display === "none") {

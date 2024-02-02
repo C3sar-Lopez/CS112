@@ -26,3 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         heroImage.style.left = '0';
     }, 100);
 });
+        function initMap() {
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 34.11806869506836, lng: -118.30036926269531},
+                zoom: 14
+            });
+        }

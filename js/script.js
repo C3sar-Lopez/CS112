@@ -32,3 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 zoom: 14
             });
         }
+$(document).ready(function() {
+    $('.image-scroll-box img').hover(
+        function() {
+            $(this).css('transform', 'scale(2.2)');
+        }, 
+        function() {
+            $(this).css('transform', '');
+        }
+    );
+});
